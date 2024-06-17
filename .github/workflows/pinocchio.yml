@@ -48,13 +48,14 @@ jobs:
           cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DPYTHON_EXECUTABLE=/usr/bin/python3
           echo hello4
           make -j$(nproc)
-          echo hello5
+          echo hello53
           sudo make install
   
       - name: pinocchio build test
         working-directory: ./test_pinocchio/
         run: |
           mkdir build
+          echo hello
           cd build
           cmake ..
           make
